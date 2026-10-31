@@ -97,6 +97,9 @@ p { text-wrap: pretty; }
 .fr--gold::before { border-image-source: url(img/frame-gold.svg); }
 .fr--paper::before { border-image-source: url(img/frame-paper.svg); }
 .fr--burgundy::before { border-image-source: url(img/frame-burgundy.svg); }
+.fr { isolation: isolate; }
+.fr::before { -webkit-transform: translateZ(0); transform: translateZ(0); -webkit-backface-visibility: hidden; backface-visibility: hidden; }
+.nt.fr { will-change: transform; }
 
 /* photographs carry the notch */
 .ph { position: relative; display: block; overflow: hidden; background: var(--sage-t); }
