@@ -280,12 +280,12 @@ body.nav-open { overflow: hidden; }
 .hk .btn--ghost:hover { background: rgba(63,74,27,.18); }
 .hk-logo { width: min(200px, 56%); height: auto; mix-blend-mode: multiply; }
 @media (min-width: 900px) {
-  .hgrid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 40px 56px; align-items: start; }
-  .hz { grid-row: span 2; }
-  .ha { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 28px; align-items: center; }
-  .ha .ph { margin-bottom: 0; aspect-ratio: 4 / 5; }
-  .hk { align-self: end; }
-  .hk { grid-template-columns: 190px minmax(0, 1fr); align-items: center; padding: 32px; }
+  .hgrid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px 56px; align-items: stretch; }
+  .hz, .ha { display: flex; flex-direction: column; }
+  .hz .ph, .ha .ph { aspect-ratio: 4 / 5; margin-bottom: 28px; }
+  .hz .ht, .ha .ht { flex: 1; }
+  .hz .ht .acts-row, .ha .ht .acts-row { margin-top: auto; padding-top: 10px; }
+  .hk { grid-column: 1 / -1; grid-template-columns: 190px minmax(0, 1fr); align-items: center; gap: 44px; padding: 36px 44px; }
   .hk-logo { width: 100%; }
 }
 
