@@ -316,10 +316,9 @@ body.nav-open { overflow: hidden; }
 .treats-copy p { max-width: 50ch; font-size: 18px; }
 .treats-copy .acts-row { margin-top: 8px; }
 .treats-pics { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; align-items: start; }
-.treats-pics .tp2 { margin-top: clamp(40px, 8vw, 110px); }
+.treats-pics { margin: 0; }
 .treats-pics .ph { aspect-ratio: 4 / 5; }
-.treats-pics .tp2 .ph { aspect-ratio: 9 / 13; }
-.treats-pics figcaption { margin-top: 10px; font-size: 15px; color: var(--green); }
+.treats-pics figcaption { grid-column: 1 / -1; margin-top: 6px; font-size: 17px; color: var(--green); }
 @media (min-width: 900px) { .treats-in { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 80px; } }
 
 /* ---------------------------------------------------------------- home: toile band */
