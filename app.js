@@ -74,8 +74,13 @@
     if ('IntersectionObserver' in window && !reduce) {
       var io = new IntersectionObserver(function (es) {
         es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-      }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
-      rv.forEach(function (el) { io.observe(el); });
+      }, { threshold: 0.08, rootMargin: '0px 0px -4% 0px' });
+      rv.forEach(function (el) {
+        /* siblings that arrive together come in one after another */
+        var sib = el.parentElement ? [].filter.call(el.parentElement.children, function (c) { return c.classList.contains('rv'); }) : [];
+        el.style.setProperty('--d', Math.min(sib.indexOf(el), 4));
+        io.observe(el);
+      });
     } else { rv.forEach(function (el) { el.classList.add('in'); }); }
   }
 
